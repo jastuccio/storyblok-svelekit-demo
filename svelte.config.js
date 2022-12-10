@@ -3,15 +3,18 @@ import adapter from '@sveltejs/adapter-auto';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: {
-		adapter: adapter()
-	},
+  kit: {
+    adapter: adapter(),
+    alias: {
+      '@storyblok/svelte': './node_modules/@storyblok/svelte',
+    },
+  },
+  preprocess: [
+    preprocess({
+      postcss: true
+    })
+  ],
 
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	]
 };
 
 export default config;
