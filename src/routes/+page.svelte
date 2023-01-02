@@ -9,8 +9,6 @@
 	});
 </script>
 
-<h1>SvelteKit & Storyblok FTW!!!</h1>
-
 <div>
 	{#if data.story}
 		<StoryblokComponent blok={data.story.content} />
